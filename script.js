@@ -14,6 +14,7 @@ const handleSubmit = (event) => {
 
   const name = document.querySelector('input[name=name]').value;
   const email = document.querySelector('input[name=email]').value;
+ 
 
   fetch('https://api.sheetmonkey.io/form/ueM8oQqC1twSZ8z9hGjSbF', {
     method: 'post',
@@ -25,6 +26,7 @@ const handleSubmit = (event) => {
   }).then(() => {
     alert('Dados enviados com sucesso!')
     removeLoading();
+    document.querySelector('form').reset();
   });
 }
 
